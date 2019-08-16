@@ -1,0 +1,70 @@
+.c-beer {
+  box-sizing: border-box;
+  border-bottom: 1px solid #434343;
+  background: #171717;
+  color: #fff;
+  padding: 24px 0;
+  font-family: PingFang SC, Helvetica;
+  line-height: 1;
+  min-height: 157px;
+  &__fragment {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .left {
+      width: 80px;
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+      color: yellow;
+    }
+    .center {
+      flex: 1;
+      .brand {
+        font-size: 32px;
+        margin-right: 10px;
+      }
+      .name {
+        font-size: 32px;
+        font-weight: bold;
+        color: yellow;
+      }
+      .en-name {
+        font-size: 20px;
+        font-family: Avenir;
+        font-weight: bold;
+        font-style: italic;
+        margin: 12px 0;
+        letter-spacing: 1px;
+      }
+      .tags {
+        min-height: 32px;
+        display: flex;
+        align-items: center;
+        .tag {
+          font-size: 20px;
+          margin-right: 10px;
+          border: 2px dotted #eee;
+          border-radius: 12px;
+          padding: 4px 8px;
+        }
+      }
+      .sold-out {
+        color: yellow;
+      }
+    }
+    .right {
+      width: 120px;
+      text-align: center;
+      .price {
+        font-size: 40px;
+        font-weight: bold;
+        color: yellow;
+      }
+      .spec {
+        font-size: 20px;
+        margin-top: 12px;
+      }
+    }
+  }
+}
