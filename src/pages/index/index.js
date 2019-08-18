@@ -16,6 +16,12 @@ export default class Index extends Component {
     this.queryBeerList()
   }
 
+  onShareAppMessage () {
+    return {
+      title: '独立星球最新酒单',
+    }
+  }
+
   queryBeerList = () => {
     Taro.request({
       url: 'https://api.wildnode.cc/beer/v1/beer/list?currentPage=1&pageSize=24'
