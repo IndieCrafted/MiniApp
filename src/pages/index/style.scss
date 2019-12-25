@@ -1,0 +1,11 @@
+.page-index {
+  height: 100vh;
+  background-color: #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .c-button {
+    margin-bottom: 40px;
+  }
+}
