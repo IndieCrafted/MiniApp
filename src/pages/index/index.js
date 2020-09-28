@@ -6,7 +6,7 @@ import "./style.scss";
 export default class Index extends Component {
   onShareAppMessage() {
     return {
-      title: "独立星球最新酒单"
+      title: "星球最新酒单"
     };
   }
 

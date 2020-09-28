@@ -9,7 +9,7 @@ class App extends Component {
       backgroundColor: "#171717",
       navigationBarBackgroundColor: "#171717",
       navigationBarTextStyle: "white",
-      navigationBarTitleText: "独立星球"
+      navigationBarTitleText: "星球"
     }
   };
 
