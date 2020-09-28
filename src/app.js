@@ -7,7 +7,7 @@ class App extends Component {
     pages: ["pages/index/index", "pages/youth/index", "pages/galaxy/index"],
     window: {
       backgroundColor: "#171717",
-      navigationBarBackgroundColor: "#000",
+      navigationBarBackgroundColor: "#171717",
       navigationBarTextStyle: "white",
       navigationBarTitleText: "独立星球"
     }

@@ -5,7 +5,7 @@ import "./style.scss";
 
 export default class Galaxy extends Component {
   config = {
-    navigationBarTitleText: "独立星球 @ 银河SOHO"
+    navigationBarTitleText: "星球 @ 成都"
   };
 
   state = {
@@ -22,7 +22,7 @@ export default class Galaxy extends Component {
 
   onShareAppMessage() {
     return {
-      title: "独立星球最新酒单"
+      title: "成都星球 - 最新酒单"
     };
   }
 
@@ -30,10 +30,11 @@ export default class Galaxy extends Component {
     Taro.request({
       url: "https://api.wildnode.cc/beer/v1/beer/list?currentPage=2&pageSize=24"
     }).then(res => {
+      const beerList = res.data.data.iData.filter(beer => beer.name !== "售罄");
       this.setState({
-        beerList: res.data.data.iData.map(item => ({
-          ...item,
-          number: item.number ?  (item.number - 24) : item.number
+        beerList: beerList.map(beer => ({
+          ...beer,
+          number: beer.number ? beer.number - 24 : beer.number
         }))
       });
     });

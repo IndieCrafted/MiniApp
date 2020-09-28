@@ -5,7 +5,34 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  .c-button {
-    margin-bottom: 40px;
+  .header {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 200px;
+    .title {
+      font-size: 68px;
+      color: yellow;
+      font-weight: 300;
+    }
+    .subtitle {
+      font-size: 44px;
+      font-weight: 300;
+    }
+  }
+  .shop {
+    text-align: center;
+    margin-bottom: 60px;
+    .location {
+      color: #fff;
+      font-size: 32px;
+      font-weight: 300;
+      margin-bottom: 12px;
+    }
+    .button {
+      font-size: 40px;
+      padding-bottom: 4px;
+      border-bottom: 4px solid yellow;
+      color: yellow;
+    }
   }
 }

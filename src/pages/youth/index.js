@@ -5,7 +5,7 @@ import "./style.scss";
 
 export default class Youth extends Component {
   config = {
-    navigationBarTitleText: "独立星球 @ 青年路"
+    navigationBarTitleText: "星球 @ 北京"
   };
 
   state = {
@@ -22,7 +22,7 @@ export default class Youth extends Component {
 
   onShareAppMessage() {
     return {
-      title: "独立星球最新酒单"
+      title: "北京星球 - 最新酒单"
     };
   }
 
@@ -30,8 +30,9 @@ export default class Youth extends Component {
     Taro.request({
       url: "https://api.wildnode.cc/beer/v1/beer/list?currentPage=1&pageSize=24"
     }).then(res => {
+      const beerList = res.data.data.iData.filter(beer => beer.name !== "售罄");
       this.setState({
-        beerList: res.data.data.iData
+        beerList
       });
     });
   };

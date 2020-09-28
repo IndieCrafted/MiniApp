@@ -25,6 +25,7 @@
 	"author": "",
 	"license": "MIT",
 	"dependencies": {
+		"@tarojs/cli": "2.0.0-beta.10",
 		"@tarojs/components": "2.0.0-beta.10",
 		"@tarojs/mini-runner": "2.0.0-beta.10",
 		"@tarojs/router": "2.0.0-beta.10",

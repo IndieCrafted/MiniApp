@@ -19,10 +19,28 @@ export default class Index extends Component {
   render() {
     return (
       <View className="page page-index">
-        <CButton onClick={e => this.navigate(e, "youth")}>青年路店</CButton>
-        <CButton onClick={e => this.navigate(e, "galaxy")}>
-          银河 SOHO 店
-        </CButton>
+        <View className="header">
+          <View className="title">星球</View>
+          <View className="subtitle">Indie Crafted</View>
+        </View>
+        <View className="shop">
+          <View className="text location ">北京 / Beijing</View>
+          <View
+            className="text button"
+            onClick={e => this.navigate(e, "youth")}
+          >
+            <View>青年路空间站</View>
+          </View>
+        </View>
+        <View className="shop">
+          <View className="text location">成都 / Chengdu</View>
+          <View
+            className="text button"
+            onClick={e => this.navigate(e, "galaxy")}
+          >
+            <View>玉林西路空间站</View>
+          </View>
+        </View>
       </View>
     );
   }
