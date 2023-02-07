@@ -28,9 +28,9 @@ export default class Youth extends Component {
 
   queryBeerList = () => {
     Taro.request({
-      url: "https://api.wildnode.cc/beer/v1/beer/list?currentPage=1&pageSize=24"
+      url: "https://bs.hazysoda.com/api/public/beer/13,14,15"
     }).then(res => {
-      const beerList = res.data.data.iData.filter(beer => beer.name !== "售罄");
+      const beerList = res.data.flat().filter(beer => beer.name !== "售罄");
       this.setState({
         beerList
       });

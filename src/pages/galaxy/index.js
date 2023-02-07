@@ -28,14 +28,11 @@ export default class Galaxy extends Component {
 
   queryBeerList = () => {
     Taro.request({
-      url: "https://api.wildnode.cc/beer/v1/beer/list?currentPage=2&pageSize=24"
+      url: "https://bs.hazysoda.com/api/public/beer/1,6,7,8"
     }).then(res => {
-      const beerList = res.data.data.iData.filter(beer => beer.name !== "售罄");
+      const beerList = res.data.flat().filter(beer => beer.name !== "售罄");
       this.setState({
-        beerList: beerList.map(beer => ({
-          ...beer,
-          number: beer.number ? beer.number - 24 : beer.number
-        }))
+        beerList
       });
     });
   };

@@ -14,10 +14,12 @@ class Beer extends Component {
     return (
       <View className="c-beer">
         <View className="c-beer__fragment">
-          <View className="left">{data.number}</View>
+          <View className="left">
+            {/* {data.number} */}
+          </View>
           <View className="center">
             <View>
-              {!soldOut && <Text className="brand">{data.brand.trim()}</Text>}
+              {/* {!soldOut && <Text className="brand">{data.brand.trim()}</Text>} */}
               <Text className="name">
                 {soldOut ? "已售罄" : data.name.trim()}
               </Text>
@@ -26,12 +28,12 @@ class Beer extends Component {
               {soldOut ? "SOLD OUT" : data.enName.trim()}
             </View>
             <View className="tags">
-              <Text className="tag">
+              {/* <Text className="tag">
                 {soldOut ? "---" : data.origin.trim()}
-              </Text>
+              </Text> */}
               <Text className="tag">{soldOut ? "---" : data.style.trim()}</Text>
               <Text className="tag">
-                {soldOut ? "---" : `${data.vol.trim()}%`}
+                {soldOut ? "---" : `${data.alc.trim()}%`}
               </Text>
             </View>
           </View>
@@ -39,11 +41,11 @@ class Beer extends Component {
             <View className="price">
               {soldOut
                 ? "---"
-                : `${data.price ? parseFloat(data.price) : ""}元`}
+                : `${data.pricing[0] ? parseFloat(data.pricing[0].price) : ""}元`}
             </View>
-            <View className="spec">
+            {/* <View className="spec">
               {soldOut ? "---" : `${data.spec.trim()}ml`}
-            </View>
+            </View> */}
           </View>
         </View>
       </View>
